@@ -24,5 +24,7 @@ urlpatterns = [
     path('api/notifications/', include('notifications.urls')),
     path('api/certificates/', include('certificates.urls')),
     path('questions/', include('questions.template_urls')),
+    path("",include("home.urls"))
+    
 ]
 

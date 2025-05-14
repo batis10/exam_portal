@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Exam Portal{% endblock %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-700 text-white p-6 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">📚 Exam Portal</h1>
+      <nav class="space-x-6">
+        <a href="#" class="hover:underline">Home</a>
+        <a href="#features" class="hover:underline">Features</a>
+        <a href="{% url "login" %}" class="hover:underline">Login</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  {% block content %}
+
+   <!-- Hero Section -->
+  <section class="bg-white py-16 lg:py-24">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Welcome to the Official Exam Portal</h2>
+      <p class="text-lg text-gray-600 mb-6">Your one-stop platform for online exams, schedules, results, and more.</p>
+      <a href="#login" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-500 transition duration-300">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-semibold mb-12 text-gray-800">Key Features</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+          <h4 class="text-xl font-bold mb-4">📝 Online Exams</h4>
+          <p>Attempt your exams from anywhere, anytime with our secure system.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+          <h4 class="text-xl font-bold mb-4">📅 Exam Schedule</h4>
+          <p>Stay updated with real-time schedules and notifications.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+          <h4 class="text-xl font-bold mb-4">📊 Results & Analytics</h4>
+          <p>Access your results and performance breakdown instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-blue-700 text-white py-6 mt-12">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Exam Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
